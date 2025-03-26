@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export default function SectionTitle({ titleText }: { titleText: string }) {
     return (
