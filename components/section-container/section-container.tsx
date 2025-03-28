@@ -1,9 +1,10 @@
 import React from 'react'
+import styles from './SectionContainer.module.css'
 
 export default function SectionContainer({ children, titleText }: { children: React.ReactNode, titleText?: string }) {
     return (
-        <div className='container max-w-4xl mx-auto px-4 py-8'>
-            {titleText ? "Title comeponent here" : null}
+        <div className={styles.container}>
+            {titleText && <h1 className='text-center'>{titleText}</h1>}
             {children}
         </div>
     )
