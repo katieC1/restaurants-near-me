@@ -19,9 +19,7 @@ export default function Home() {
       <SectionContainer
         titleText="Takeway near you"
       >
-        <div>
-          <p className="text-center">This will be the cards</p>
-        </div>
+        <p className="text-center pt-4 text-organge">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis nisi dolorum repellendus commodi numquam molestiae doloremque consequatur at, ipsum, earum eos voluptatum quae molestias vero reprehenderit corrupti voluptas praesentium harum.</p>
       </SectionContainer>
 
 

@@ -1,12 +1,8 @@
-/* components/RestaurantCard.module.css */
+/* @import "tailwindcss"; */
 
 .card {
   border: 1px solid #f5f5dc;
   border-radius: 8px;
   padding: 1rem;
   transition: box-shadow 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }

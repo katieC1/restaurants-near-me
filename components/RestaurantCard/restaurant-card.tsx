@@ -8,7 +8,7 @@ export default function RestaurantCard({ restaurant }: { restaurant: { name: str
 
                 <h3>{restaurant.name}</h3>
                 <p>{restaurant.location}</p>
-                <p>{restaurant.rating}</p>
+                <p className='font-semibold  text-orange'>{restaurant.rating}</p>
 
 
             </div>
