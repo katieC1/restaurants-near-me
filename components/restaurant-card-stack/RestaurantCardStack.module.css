@@ -1,0 +1,8 @@
+.container {
+  gap: 1rem;
+}
+
+.card-container {
+  margin-block: 0.25rem;
+  margin-bottom: 1rem;
+}
