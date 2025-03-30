@@ -13,7 +13,7 @@ export default function Home() {
   const restaurants = [
 
     {
-      name: "Yala Yala",
+      name: "Pizza Express",
       location: "London",
       rating: 4.5,
       cuisines: "Indian, Chinese, Italian"

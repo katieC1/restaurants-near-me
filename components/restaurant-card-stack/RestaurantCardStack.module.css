@@ -1,5 +1,7 @@
 .container {
-  gap: 1rem;
+  display: flex; /* or use display: grid; */
+  flex-direction: column; /* Ensures items stack vertically */
+  gap: 1rem; /* Adds spacing between items */
 }
 
 .card-container {
