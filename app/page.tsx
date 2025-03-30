@@ -1,3 +1,4 @@
+import RestaurantCardStack from "@/components/restaurant-card-stack/restaurant-card-stack";
 import RestaurantCard from "@/components/RestaurantCard/restaurant-card";
 import SectionContainer from "@/components/section-container/section-container";
 import Image from "next/image";
@@ -9,11 +10,23 @@ import Image from "next/image";
 export default function Home() {
 
 
-  const restaurant = {
-    name: "Yala Yala",
-    location: "London",
-    rating: 4.5,
-  }
+  const restaurants = [
+
+    {
+      name: "Pizza Express",
+      location: "London",
+      rating: 4.5,
+      cuisines: "Indian, Chinese, Italian"
+    },
+    {
+      name: "Pho",
+      location: "London",
+      rating: 3.5,
+      cuisines: "Vietnamese, healthy, vegan"
+    }
+
+  ]
+
   return (
     <>
       <SectionContainer
@@ -25,7 +38,7 @@ export default function Home() {
 
 
       <SectionContainer>
-        <RestaurantCard restaurant={restaurant} />
+        <RestaurantCardStack restaurantData={restaurants} />
       </SectionContainer>
     </>
 

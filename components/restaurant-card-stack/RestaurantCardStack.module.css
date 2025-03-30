@@ -1,0 +1,10 @@
+.container {
+  display: flex; /* or use display: grid; */
+  flex-direction: column; /* Ensures items stack vertically */
+  gap: 1rem; /* Adds spacing between items */
+}
+
+.card-container {
+  margin-block: 0.25rem;
+  margin-bottom: 1rem;
+}
