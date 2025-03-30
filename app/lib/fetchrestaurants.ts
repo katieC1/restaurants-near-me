@@ -20,7 +20,9 @@ export async function fetchRestaurants(
 
   const data = await response.json();
 
-  console.log(data, "data in fetchRestaurants");
+  console.log(data.restaurants, "data in fetchRestaurants");
 
-  return Promise.resolve([]);
+  return data.restaurants.map((restaurant: any) => ({
+    ...restaurant,
+  }));
 }
