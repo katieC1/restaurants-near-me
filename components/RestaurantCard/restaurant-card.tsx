@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './RestaurantCard.module.css'
+import RatingCardItem from '../rating-card-item/rating-card-item'
 
 export default function RestaurantCard({ restaurant }: { restaurant: { name: string, location: string, rating: number } }) {
     return (
@@ -8,7 +9,8 @@ export default function RestaurantCard({ restaurant }: { restaurant: { name: str
 
                 <h3>{restaurant.name}</h3>
                 <p>{restaurant.location}</p>
-                <p className='font-semibold  text-orange'>{restaurant.rating}</p>
+                <RatingCardItem rating={restaurant.rating} />
+
 
 
             </div>

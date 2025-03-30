@@ -2,30 +2,21 @@ import RestaurantCardStack from "@/components/restaurant-card-stack/restaurant-c
 import RestaurantCard from "@/components/RestaurantCard/restaurant-card";
 import SectionContainer from "@/components/section-container/section-container";
 import Image from "next/image";
+import { fetchRestaurants } from "./lib/fetchrestaurants";
+
+interface PageProps {
+  searchParams?: { postcode?: string };  // Next.js passes query params here
+}
 
 
+export default async function Home({ searchParams }: PageProps) {
 
+  // const postcode = searchParams?.postcode || 'W36JH';
+  const postcode = 'W36JH';
+  const allRestaurants = await fetchRestaurants(postcode);
+  const restaruants = allRestaurants.slice(0, 10);
 
-
-export default function Home() {
-
-
-  const restaurants = [
-
-    {
-      name: "Pizza Express",
-      location: "London",
-      rating: 4.5,
-      cuisines: "Indian, Chinese, Italian"
-    },
-    {
-      name: "Pho",
-      location: "London",
-      rating: 3.5,
-      cuisines: "Vietnamese, healthy, vegan"
-    }
-
-  ]
+  console.log(restaruants, 'restaruants');
 
   return (
     <>
@@ -38,7 +29,8 @@ export default function Home() {
 
 
       <SectionContainer>
-        <RestaurantCardStack restaurantData={restaurants} />
+        <h2>Restaurants to go back here</h2>
+        {/* <RestaurantCardStack restaurantData={restaurants} /> */}
       </SectionContainer>
     </>
 
