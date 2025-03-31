@@ -7,7 +7,7 @@ import { Rating } from "@/types";
 export default function RatingCardItem({ starRating, count }: Rating) {
     const filledPercentage = Math.min(Math.max(starRating / 5, 0), 1) * 100; // Clamp between 0% and 100%
 
-    console.log(filledPercentage, 'filledPercentage');
+    // console.log(filledPercentage, 'filledPercentage');
 
     return (
         <div className="">

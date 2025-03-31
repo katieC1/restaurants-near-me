@@ -34,3 +34,7 @@ Add how to build, compile and run your solution into the README
 Improvements:
 
 Where the restaurant is a chain add - location on
+
+create context for postcode instead of prop-drilling
+
+consider more edje cases

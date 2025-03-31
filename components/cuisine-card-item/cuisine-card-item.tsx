@@ -5,7 +5,6 @@ import { Cuisine } from '@/types';
 
 
 export default function CuisineCardItem({ cuisine }: { cuisine: Cuisine[] }) {
-    console.log(cuisine, 'cuisine');
 
     return (
         <div className={styles.container}>
