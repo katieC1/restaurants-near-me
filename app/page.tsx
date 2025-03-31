@@ -14,9 +14,9 @@ export default async function Home({ searchParams }: PageProps) {
   // const postcode = searchParams?.postcode || 'W36JH';
   const postcode = 'W36JH';
   const allRestaurants = await fetchRestaurants(postcode);
-  const restaruants = allRestaurants.slice(0, 10);
+  const restaurants = allRestaurants.slice(0, 10);
 
-  console.log(restaruants, 'restaruants');
+  console.log(restaurants, 'restaruants');
 
   return (
     <>
@@ -29,8 +29,7 @@ export default async function Home({ searchParams }: PageProps) {
 
 
       <SectionContainer>
-        <h2>Restaurants to go back here</h2>
-        {/* <RestaurantCardStack restaurantData={restaurants} /> */}
+        <RestaurantCardStack restaurantData={restaurants} />
       </SectionContainer>
     </>
 

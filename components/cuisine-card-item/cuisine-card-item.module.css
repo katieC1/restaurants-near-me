@@ -1,7 +1,9 @@
 .container {
+  display: inline-flex;
 }
 
 .text {
   font-weight: 500;
   font-style: italic;
+  padding-right: 4px;
 }

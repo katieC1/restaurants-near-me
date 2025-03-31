@@ -20,9 +20,12 @@ export async function fetchRestaurants(
 
   const data = await response.json();
 
-  console.log(data.restaurants, "data in fetchRestaurants");
+  // console.log(data.restaurants, "data in fetchRestaurants");
 
   return data.restaurants.map((restaurant: any) => ({
-    ...restaurant,
+    name: restaurant.name,
+    cuisines: restaurant.cuisines,
+    ratingData: restaurant.rating,
+    location: restaurant.address,
   }));
 }
