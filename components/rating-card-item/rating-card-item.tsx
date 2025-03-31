@@ -1,34 +1,31 @@
+"use client"
+
 import React from "react";
 import Icons from "../icons/icons";
 import { Rating } from "@/types";
-
+import StarRatings from "react-star-ratings";
 
 
 export default function RatingCardItem({ starRating, count }: Rating) {
-    const filledPercentage = Math.min(Math.max(starRating / 5, 0), 1) * 100; // Clamp between 0% and 100%
-
-    // console.log(filledPercentage, 'filledPercentage');
+    const filledPercentage = Math.min(Math.max(starRating / 5, 0), 1) * 100;
 
     return (
-        <div className="">
-            <div className="relative w-7 h-7" >
+        <div className="flex items-center">
+            {/* Render 5 stars */}
+            <StarRatings
+                rating={starRating}
+                starDimension="16px"
+                starSpacing="4px"
 
-                < Icons type="star" className="absolute top-0 left-0" />
 
-                <div
-                    className="absolute top-0 left-0 overflow-hidden"
-                    style={{
-                        width: `${filledPercentage}%`,
-                        position: "absolute",
-                        overflow: "hidden",
-                    }}
-                >
+                starRatedColor="yellow"
+                starEmptyColor="gray"
+                numberOfStars={5}
+            />
 
-                    <Icons type="star" className="text-yellow-500 bg-yellow-800 w-7 h-7" />
 
-                </div >
-            </div >
-            <span className="text-sm text-gray-500 pl-1 ">({starRating} / {count} reviews)</span>
+            {/* Display review count */}
+            <span className="text-sm text-gray-500 pl-2">({starRating} / {count} reviews)</span>
         </div>
     );
 }
