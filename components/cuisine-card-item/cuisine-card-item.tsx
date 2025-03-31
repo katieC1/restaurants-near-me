@@ -1,11 +1,19 @@
-import React from 'react'
-import styles from './cuisine-card-item.module.css'
+import React from 'react';
+import styles from './cuisine-card-item.module.css';
+import { Cuisine } from '@/types';
 
-export default function CuisineCardItem({ cuisine }: { cuisine: string }) {
-    //consideration of how this is ordered - could be ordered based on users preference for improved version 
+
+
+export default function CuisineCardItem({ cuisine }: { cuisine: Cuisine[] }) {
+    console.log(cuisine, 'cuisine');
+
     return (
         <div className={styles.container}>
-            <p className={styles.text} > {cuisine}</p>
+            {cuisine.map((item) => (
+                <p key={item.uniqueName} className={styles.text}>
+                    {item.name},
+                </p>
+            ))}
         </div>
-    )
+    );
 }
