@@ -29,7 +29,7 @@ export default async function Home({ searchParams }: PageProps) {
 
 
       <SectionContainer>
-        <RestaurantCardStack restaurantData={restaurants} />
+        <RestaurantCardStack restaurantData={restaurants} postcode={postcode} />
       </SectionContainer>
     </>
 

@@ -2,12 +2,7 @@ export interface RestauranData {
   name: string;
   cuisines: [];
   ratingData: Rating;
-  location: {
-    city: string;
-    postcode: string;
-    firstLine: string;
-    location: Cuisine;
-  };
+  location: Location;
 }
 
 export interface Rating {
@@ -18,4 +13,11 @@ export interface Rating {
 export interface Cuisine {
   name: string;
   uniqueName: string;
+}
+
+export interface Location {
+  city: string;
+  postalCode: string;
+  firstLine: string;
+  location: any;
 }

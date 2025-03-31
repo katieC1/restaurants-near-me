@@ -1,13 +1,40 @@
-import React from 'react'
-import styles from './address-card-item.module.css'
+"use client"
+import { getDistanceBetweenPostcodes } from '@/app/lib/helper';
+import { Location } from '@/types';
+import React, { useEffect, useState } from 'react';
 
-export default function AddressCardItem({ location }: { location: any }) {
-    //this component could first display just the area and distance from the location 
-    //i could start with the assumption that the start address is my address 
+
+
+export default function AddressCardItem({ location, userPostcode }: { location: Location, userPostcode: string }) {
+    const [distance, setDistance] = useState<number | null>(null);
+
+    useEffect(() => {
+        async function fetchDistance() {
+            try {
+                if (userPostcode && location.postalCode) {
+                    console.log(userPostcode, location.postalCode, "postcodes and data");
+                    const dist = await getDistanceBetweenPostcodes(userPostcode, location.postalCode);
+                    setDistance(dist);
+                }
+                else {
+                    console.log('Postcode error');
+                }
+            } catch (error) {
+                console.error('Error fetching distance:', error);
+            }
+        }
+
+        fetchDistance();
+    }, [userPostcode, location.postalCode]);
+
     return (
-        <div className={styles.container}>
-            <p className={styles.text}>{location.city}</p>
+        <div>
+            <p>{location.firstLine}</p>
+            {distance !== null && <p className='italic text-gray-400 tiny'>Distance: {distance.toFixed(2)} m</p>}
+
 
         </div>
-    )
+    );
 }
+
+
