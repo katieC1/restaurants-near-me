@@ -14,11 +14,13 @@ export default function RestaurantCard({ restaurant, postcode }: { restaurant: R
 
                 <NameCardItem name={restaurant.name} />
 
+                <RatingCardItem starRating={ratingData.starRating} count={ratingData.count} />
+
                 <CuisineCardItem cuisine={restaurant.cuisines} />
 
 
                 {/* <p>{restaurant.location}</p> */}
-                <RatingCardItem starRating={ratingData.starRating} count={ratingData.count} />
+
 
                 <AddressCardItem location={restaurant.location} userPostcode={postcode} />
 

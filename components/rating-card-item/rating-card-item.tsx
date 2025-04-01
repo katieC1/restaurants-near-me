@@ -16,8 +16,6 @@ export default function RatingCardItem({ starRating, count }: Rating) {
                 rating={starRating}
                 starDimension="16px"
                 starSpacing="4px"
-
-
                 starRatedColor="yellow"
                 starEmptyColor="gray"
                 numberOfStars={5}

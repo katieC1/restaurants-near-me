@@ -1,5 +1,5 @@
 "use client"
-import { getDistanceBetweenPostcodes } from '@/app/lib/helper';
+import { getDistanceBetweenPostcodes } from '@/app/lib/calculateDistacne';
 import { Location } from '@/types';
 import React, { useEffect, useState } from 'react';
 

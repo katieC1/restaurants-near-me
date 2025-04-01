@@ -3,16 +3,22 @@ import RestaurantCard from "@/components/RestaurantCard/restaurant-card";
 import SectionContainer from "@/components/section-container/section-container";
 import Image from "next/image";
 import { fetchRestaurants } from "./lib/fetchrestaurants";
+import { SearchBar } from "@/components/search-bar/search-bar";
 
 interface PageProps {
-  searchParams?: { postcode?: string };  // Next.js passes query params here
+  searchParams?: { postcode?: string };
 }
 
 
 export default async function Home({ searchParams }: PageProps) {
+  let postcode = 'W36JH';
 
   // const postcode = searchParams?.postcode || 'W36JH';
-  const postcode = 'W36JH';
+  if (searchParams?.postcode) {
+    postcode = searchParams.postcode
+
+  }
+
   const allRestaurants = await fetchRestaurants(postcode);
   const restaurants = allRestaurants.slice(0, 10);
 
@@ -23,7 +29,10 @@ export default async function Home({ searchParams }: PageProps) {
       <SectionContainer
         titleText="Takeway near you"
       >
-        <p className="text-center pt-4 text-organge">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis nisi dolorum repellendus commodi numquam molestiae doloremque consequatur at, ipsum, earum eos voluptatum quae molestias vero reprehenderit corrupti voluptas praesentium harum.</p>
+        <p className="text-center pt-4 text-organge">Enter your postcode to search for restaurants in your local area.</p>
+
+        <SearchBar defaultValue={postcode} />
+
       </SectionContainer>
 
 
