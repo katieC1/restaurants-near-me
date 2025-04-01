@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import React from "react";
-import Icons from "../icons/icons";
 import { Rating } from "@/types";
-import StarRatings from "react-star-ratings";
+import StarRating from "../star-rating/star-rating";
+// import StarRatings from "react-star-ratings";
 
 
 export default function RatingCardItem({ starRating, count }: Rating) {
@@ -12,15 +12,16 @@ export default function RatingCardItem({ starRating, count }: Rating) {
     return (
         <div className="flex items-center">
             {/* Render 5 stars */}
-            <StarRatings
+            {/* <StarRatings
                 rating={starRating}
                 starDimension="16px"
                 starSpacing="4px"
-
-
                 starRatedColor="yellow"
                 starEmptyColor="gray"
                 numberOfStars={5}
+            /> */}
+            <StarRating
+                rating={starRating}
             />
 
 

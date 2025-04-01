@@ -21,3 +21,9 @@ export interface Location {
   firstLine: string;
   location: any;
 }
+
+export interface StarRatingProps {
+  rating: number;
+  starDimension?: string;
+  starSpacing?: string;
+}
