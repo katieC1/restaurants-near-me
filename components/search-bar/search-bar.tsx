@@ -13,7 +13,7 @@ export function SearchBar({ defaultValue = 'w36jh' }: { defaultValue?: string })
         e.preventDefault();
         const cleanedPostcode = postcode.toLocaleLowerCase().replace(/\s+/g, '');
         const params = new URLSearchParams();
-        if (cleanedPostcode) params.set('q', cleanedPostcode);
+        if (cleanedPostcode) params.set('postcode', cleanedPostcode); // ✅ match key
         router.push(`/?${params.toString()}`);
     };
 
