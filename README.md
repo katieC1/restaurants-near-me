@@ -1,40 +1,51 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+To run the project locally:
 
-First, run the development server:
+Clone the repo
 
-```bash
+git clonehttps://github.com/katieC1/restaurants-near-me.git
+cd restaurants-near-me
+
+Install dependencies:
+npm install
+
+# or
+
+yarn
+
+Run the development server:
 npm run dev
+
 # or
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Assumptions:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- This is designed with home customers in mind. I’ve structured the UI and data to be as helpful as possible for someone ordering food to their postcode.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-I assumed you do not want this deployed - otherwise I would have done so via vercel and provided the link
 
-<!-- katie additions here  -->
+-I assumed this is to be only a simple demo of working with the data - not something for real world use. Hense the lack of testing, error handling etc
 
-Criteria for readme:
+Possible Improvements:
+Page refresh frequency – Consider how often the app should auto-refresh to stay up-to-date.
 
-Add how to build, compile and run your solution into the README
-● Include any assumptions or things that were not clear to you in the README
-● Include any improvements you’d make to your solution in the README
+Error handling – Improve how errors are managed in the SearchBar component and across API calls.
 
-    //this component could first display just the area and distance from the location
-    //i could start with the assumption that the start address is my address
+Postcode validation – Integrate an address/postcode API to ensure users are ordering to real locations.
 
-Improvements:
+Prop-drilling – Refactor to use React Context for managing postcode state across components.
 
-Where the restaurant is a chain add - location on
+Edge cases – Handle more scenarios (e.g., invalid input, no results). This was kept light for demo purposes.
 
-create context for postcode instead of prop-drilling
+Testing – Add a testing library - I have worked with jest and react testing library previously. Suggested tests:
 
-consider more edje cases
+Component renders correctly
+
+Search input updates state
+
+Postcode validation triggers correctly
+
+(leave room for more tests...)
