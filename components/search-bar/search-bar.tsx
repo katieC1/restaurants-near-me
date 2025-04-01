@@ -13,7 +13,7 @@ export function SearchBar({ defaultValue = 'w36jh' }: { defaultValue?: string })
         e.preventDefault();
         const cleanedPostcode = postcode.toLocaleLowerCase().replace(/\s+/g, '');
         const params = new URLSearchParams();
-        if (cleanedPostcode) params.set('postcode', cleanedPostcode); // ✅ match key
+        if (cleanedPostcode) params.set('postcode', cleanedPostcode);
         router.push(`/?${params.toString()}`);
     };
 
@@ -26,7 +26,7 @@ export function SearchBar({ defaultValue = 'w36jh' }: { defaultValue?: string })
                 placeholder="Search..."
                 className={styles.input}
             />
-            <button type="submit">Update Postcode</button>
+            <button type="submit" className={styles.button}>Update Postcode</button>
         </form>
     );
 }

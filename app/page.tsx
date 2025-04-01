@@ -13,7 +13,7 @@ interface PageProps {
 export default async function Home({ searchParams }: PageProps) {
 
 
-  const postcode = searchParams?.postcode || 'W36JH';
+  const postcode = await searchParams?.postcode || 'w36jh';
 
   const allRestaurants = await fetchRestaurants(postcode);
   const restaurants = allRestaurants.slice(0, 10);
