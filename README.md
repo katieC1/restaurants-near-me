@@ -51,4 +51,4 @@ Search input updates state
 
 Postcode validation triggers correctly
 
-(leave room for more tests...)
+Tests regarding distance check and so on 
