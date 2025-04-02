@@ -25,7 +25,7 @@ export default async function Home({ searchParams }: PageProps) {
       <SectionContainer
         titleText="Takeway near you"
       >
-        <p className="text-center pt-4 text-organge">Enter your postcode to search for restaurants in your local area.</p>
+        <p className="text-center pt-4 text-organge">Enter your postcode to search for restaurants in your local area. Please consider, this is a simple demonstation - it needs to be a legitamite UK postcode for this to work - edge cases not considered.</p>
 
         <SearchBar defaultValue={postcode} />
 

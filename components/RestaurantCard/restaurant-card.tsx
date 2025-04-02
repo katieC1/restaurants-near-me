@@ -23,13 +23,7 @@ export default function RestaurantCard({ restaurant, postcode }: { restaurant: R
 
                 <CuisineCardItem cuisine={restaurant.cuisines} />
 
-
-                {/* <p>{restaurant.location}</p> */}
-
-
                 <AddressCardItem location={restaurant.location} userPostcode={postcode} />
-
-
 
             </div>
         </div>

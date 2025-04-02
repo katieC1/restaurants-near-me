@@ -10,6 +10,7 @@ export default function RatingCardItem({ starRating, count }: Rating) {
     const filledPercentage = Math.min(Math.max(starRating / 5, 0), 1) * 100;
 
     return (
+        //react-star-ratings caused undersired effect - so bespoke, simple star rating component was created
         <div className="flex items-center">
             {/* Render 5 stars */}
             {/* <StarRatings

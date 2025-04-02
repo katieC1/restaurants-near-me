@@ -12,7 +12,7 @@ export default function AddressCardItem({ location, userPostcode }: { location: 
         async function fetchDistance() {
             try {
                 if (userPostcode && location.postalCode) {
-                    console.log(userPostcode, location.postalCode, "postcodes and data");
+                    // console.log(userPostcode, location.postalCode, "postcodes and data");
                     const dist = await getDistanceBetweenPostcodes(userPostcode, location.postalCode);
                     setDistance(dist);
                 }
@@ -31,7 +31,6 @@ export default function AddressCardItem({ location, userPostcode }: { location: 
         <div>
             <p>{location.firstLine}</p>
             {distance !== null && <p className='italic text-gray-400 tiny'>Distance: {distance.toFixed(2)} m</p>}
-
 
         </div>
     );

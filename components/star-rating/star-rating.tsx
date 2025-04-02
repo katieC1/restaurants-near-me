@@ -12,6 +12,7 @@ export default function StarRating({
     const stars = Array.from({ length: 5 }, (_, index) => {
         const fillPercentage = Math.min(Math.max(rating - index, 0), 1) * 100;
 
+        //intended to do the below making use of my icon file - ran out of time to impliment (new svg was needed)
         return (
             <div
                 key={index}

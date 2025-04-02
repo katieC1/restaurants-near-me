@@ -39,6 +39,8 @@ export function calculateDistance(
   return R * c; // Distance in miles
 }
 
+// due to the usecase of this function only relating to calculating distance between postcodes I have called it in the function, which is not ideal for a production application
+
 export async function getDistanceBetweenPostcodes(
   postcode1: string,
   postcode2: string

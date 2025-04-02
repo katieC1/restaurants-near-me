@@ -27,7 +27,10 @@ Assumptions:
 
 -I assumed you do not want this deployed - otherwise I would have done so via vercel and provided the link
 
--I assumed this is to be only a simple demo of working with the data - not something for real world use. Hense the lack of testing, error handling etc
+-I assumed this is to be only a simple demo of working with the data - not something for real world use. Hense the lack of testing, error handling, and fetch restaurants functions
+being written as they are - where one calls another function. This should not be done in a production aplication due to added complexity - I would of instead created these all as helper functions.
+
+-Import React left in each component because I thought I would add in testing, and have required that to be kept in components for that purpose before.
 
 Possible Improvements:
 Page refresh frequency – Consider how often the app should auto-refresh to stay up-to-date.
