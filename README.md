@@ -10,14 +10,14 @@ cd restaurants-near-me
 Install dependencies:
 npm install
 
-# or
+or
 
 yarn
 
 Run the development server:
 npm run dev
 
-# or
+or
 
 yarn dev
 
