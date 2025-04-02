@@ -22,8 +22,7 @@ or
 yarn dev
 
 Assumptions:
-
-- This is designed with home customers in mind. I’ve structured the UI and data to be as helpful as possible for someone ordering food to their postcode.
+-This is designed with home customers in mind. I’ve structured the UI and data to be as helpful as possible for someone ordering food to their postcode.
 
 -I assumed you do not want this deployed - otherwise I would have done so via vercel and provided the link
 
